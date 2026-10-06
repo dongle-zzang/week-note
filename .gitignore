@@ -1,0 +1,30 @@
+node_modules/
+.pnpm-store/
+.nuxt/
+.output/
+.data/
+.cache/
+dist
+.DS_Store
+*.log
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# 컴퓨터별 설정, 사내 서버 주소, 접속 정보, 업무 데이터
+/local/
+*.local
+*.local.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.sqlite
+*.sqlite3
+*.db
+
+# 편집기와 로컬 도구 설정
+.idea/
+.vscode/
+.codex/

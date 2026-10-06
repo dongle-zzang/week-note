@@ -1,0 +1,16 @@
+{
+  "name": "week-note",
+  "private": true,
+  "packageManager": "pnpm@11.19.0",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "pnpm --filter @week-note/web dev",
+    "build": "pnpm --filter @week-note/web build",
+    "generate": "pnpm --filter @week-note/web generate",
+    "preview": "pnpm --filter @week-note/web preview",
+    "typecheck": "pnpm --filter @week-note/web typecheck",
+    "test": "pnpm --filter @week-note/web test"
+  }
+}
