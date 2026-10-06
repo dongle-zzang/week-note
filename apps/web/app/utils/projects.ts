@@ -49,7 +49,7 @@ export function parseProjectSections(source: string): ProjectSection[] {
 
 export function organizeMemos(memos: WorkMemo[]): string {
   const groups = new Map<string | null, string[]>()
-  const ordered = [...memos].sort((a, b) => a.date.localeCompare(b.date) || a.createdAt - b.createdAt)
+  const ordered = [...memos].sort((a, b) => a.date.localeCompare(b.date))
   for (const memo of ordered) {
     for (const section of parseProjectSections(memo.content)) {
       const text = markdownToText(section.content)

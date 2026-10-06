@@ -1,4 +1,5 @@
 import type { MemoDraft, WorkMemo } from '~/types/work'
+import { moveBoardMemo } from '~/utils/memoBoard'
 
 export function useWorkEntries() {
   const memos = ref<WorkMemo[]>([])
@@ -13,5 +14,9 @@ export function useWorkEntries() {
     }
   }
 
-  return { memos, saveMemo }
+  function moveMemo(id: string, date: string, beforeId?: string) {
+    memos.value = moveBoardMemo(memos.value, id, date, beforeId)
+  }
+
+  return { memos, saveMemo, moveMemo }
 }
